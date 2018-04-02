@@ -1,0 +1,107 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{C477CA4D-44EE-4E4D-BB12-8224FCA0E4F8}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SimuKit.ML.TimeSeries</RootNamespace>
+    <AssemblyName>SimuKit.ML.TimeSeries</AssemblyName>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x64</PlatformTarget>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <PlatformTarget>x64</PlatformTarget>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <PlatformTarget>x64</PlatformTarget>
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ABMath">
+      <HintPath>..\packages\Cronos\ABMath.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ARMAPredictor.cs" />
+    <Compile Include="ARMAXPredictor.cs" />
+    <Compile Include="BasicNetworkPredictor.cs" />
+    <Compile Include="GaussianDistributionPredictor.cs" />
+    <Compile Include="GaussianProcessPredictor.cs" />
+    <Compile Include="GeneticProgrammingPredictor.cs" />
+    <Compile Include="MLPPredictor.cs" />
+    <Compile Include="Predictor.cs" />
+    <Compile Include="PredictorStat.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RBFNetworkPredictor.cs" />
+    <Compile Include="SVMPredictor.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\packages\AForge.NET Framework-2.2.4\Sources\Core\Core.csproj">
+      <Project>{631AC093-430F-45F4-BA0C-AF0F0405918A}</Project>
+      <Name>Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\packages\AForge.NET Framework-2.2.4\Sources\Genetic\Genetic.csproj">
+      <Project>{2EFAA327-1789-4438-B9F5-E83ACAE12DB2}</Project>
+      <Name>Genetic</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\packages\AForge.NET Framework-2.2.4\Sources\Math\Math.csproj">
+      <Project>{C0FAF524-72E4-46F7-8C1B-A6B74DEC5EBE}</Project>
+      <Name>Math</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\packages\Encog\encog-core-cs\encog-core-cs.csproj">
+      <Project>{AC6FADF9-0904-4EBD-B22C-1C787C7E7A95}</Project>
+      <Name>encog-core-cs</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\packages\MathNet.Numerics\src\Numerics\Numerics.csproj">
+      <Project>{B7CAE5F4-A23F-4438-B5BE-41226618B695}</Project>
+      <Name>Numerics</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SimuKit.Math\SimuKit.Math.csproj">
+      <Project>{206551B4-70D2-4587-B1B8-AB276578B8F4}</Project>
+      <Name>SimuKit.Math</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

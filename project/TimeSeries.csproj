@@ -8,8 +8,8 @@
     <ProjectGuid>{C477CA4D-44EE-4E4D-BB12-8224FCA0E4F8}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>SimuKit.ML.TimeSeries</RootNamespace>
-    <AssemblyName>SimuKit.ML.TimeSeries</AssemblyName>
+    <RootNamespace>TimeSeries</RootNamespace>
+    <AssemblyName>TimeSeries</AssemblyName>
     <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkProfile />
